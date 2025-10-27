@@ -1,0 +1,45 @@
+# Core NLP Libraries
+spacy
+nltk
+transformers
+torch
+sentence-transformers
+
+# PDF and Document Processing
+pdfplumber
+PyMuPDF
+python-docx
+beautifulsoup4
+html2text
+
+# Text Processing
+ftfy
+regex
+chardet
+
+# Evaluation Metrics
+rouge-score
+bert-score
+sacrebleu
+readability
+
+# Visualization
+streamlit
+plotly
+wordcloud
+matplotlib
+
+# Utilities
+python-dotenv
+numpy
+pandas
+scikit-learn
+tqdm
+PyYAML
+
+# PDF Generation
+reportlab
+
+# Optional Multilingual Support
+sacremoses
+

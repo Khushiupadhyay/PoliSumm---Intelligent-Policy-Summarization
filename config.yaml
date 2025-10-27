@@ -1,0 +1,41 @@
+# PoliSumm Configuration
+
+# Model Settings
+models:
+  summarization_model: "google/long-t5-tglobal-base"  # Alternative: facebook/bart-large-cnn
+  embedding_model: "sentence-transformers/all-mpnet-base-v2"  # For semantic similarity
+  ner_model: "en_core_web_sm"  # spaCy model
+  
+# Summarization Settings
+summarization:
+  max_summary_length: 250  # Words
+  min_summary_length: 50
+  num_sentences_to_extract: 10  # For extractive summary
+  beam_size: 3  # For generative models
+  
+# Processing Settings
+processing:
+  remove_stopwords: true
+  perform_lemmatization: true
+  keep_negations: true  # Important for legal text
+  preserve_numbers: true  # Keep dates, amounts
+  preserve_entities: true  # Keep named entities
+  
+# Evaluation Settings
+evaluation:
+  rouge_metrics: ["rouge1", "rouge2", "rougeL"]
+  similarity_threshold: 0.7  # Minimum SBERT similarity
+  enable_human_eval: false
+  
+# Output Settings
+output:
+  format: "json"  # json, markdown, txt
+  include_metadata: true
+  include_evaluation: true
+  include_simplification_breakdown: true
+  
+# Multilingual Settings
+multilingual:
+  target_languages: ["en"]  # ["en", "hi"]
+  translation_model: "indic-trans"
+
